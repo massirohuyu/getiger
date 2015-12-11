@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <![endif]-->
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=980, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="DESCRIPTION">
+    <meta name="keywords" content="KEYWORDS">
+    <meta name="author" content="Seino">
+
+    <title>TITLE</title>
+
+    <link rel="stylesheet" href="css/common.css" media='all'>
+    <!--[if lt IE 9]>
+        <script src="javascripts/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="js/lib/jquery.min.js"></script>
+
+    <link rel="shortcut icon" href="">
+    <!--
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="196x196" href="">
+        <link rel="apple-touch-icon" sizes="152x152" href="">
+    -->
+
+</head>
+
+<body id="index">
+
+    <div class="container">
+
+        <header class="header clearfix" id="page-top">
+            <h1>
+              動物園とトラ情報取得テスト
+            </h1>
+        </header>
+
+        <div class="contents">
+
+            <main class="content-main">
+                
+                    <button id="categorytest" class="c-btn">①カテゴリ取得テスト</button>
+                    <button id="domtest" class="c-btn">②ページdom取得テスト</button>
+                    
+                    <ol>
+                        <li>コンソールを開いてください</li>
+                        <li>①を押すと「トラ」カテゴリの亜種のリストが取得されます。</li>
+                        <li>②を押すと「動物園一覧」ページの各動物園ページDOMが取得されます。<br>
+                            先に①を押していたら、日本の動物園の範囲で何のトラがいるのか表示されます。</li>
+                    </ol>
+                    <p>※あまり何度もやるとwikipedia側に負荷がかかるのでやめましょう。。。</p>
+
+            </main><!--/content-main-->
+
+
+        </div><!--/contents-->
+
+    </div>
+    <!--/container-->
+
+</body>
+<script>
+
+    jQuery(document).ready(function(){
+        var $document = $(document),
+            tigerList = [],
+            japaneseAnimalsTitles = ['動物一覧','飼育動物'],
+            japaneseZoos = [],
+            abroadZooz = [];
+        
+        $('#domtest').on('click', function(){
+            console.log('開始');
+            
+            getWikiDomData('動物園の一覧')
+                .success(function(data){
+                    var $wikiData = shapeWikiDomData(data);
+                    $wikiData.not('.tocright').find('li > a[href]:first-child').each(function(){
+                        var $thisA = $(this),
+                            $nextA = $thisA.next().find('a'),
+                            name = $thisA.text();
+                        
+//                        console.log(name);
+                        
+                        if($nextA.text() === '英語版'){
+                            abroadZooz.push([name, $nextA.attr('title')]);
+                        } else {
+                            
+                            japaneseZoos.push([name, $thisA.attr('title')]);
+                        }
+                    });
+                    
+                    console.log(japaneseZoos);
+//                    console.log(abroadZooz);
+                    $(document).trigger('loadZooLists');
+            });
+            
+        });
+        
+        $('#categorytest').on('click', function(){
+            console.log('開始');
+            
+            getWikiCategoryData('トラ')
+                .success(function(data){
+                    var categoryData = data.query.categorymembers,
+                        localTigerList = [],
+                        currentId = 0;
+                    
+                    categoryData.forEach(function(data){
+                        if(data.sortkeyprefix.match('亜')) {
+                            localTigerList.push({
+                                id: currentId,
+                                name : data.title
+                            });
+                            currentId++;
+                        }
+                    });
+                    
+                    tigerList = localTigerList;
+                    console.log(tigerList);
+                    console.log('完了');
+            });
+            
+        });
+        
+        $(document).on('loadZooLists', function(){
+            
+            var lists = [ japaneseZoos, abroadZooz ],
+                i = 0, j = 51;
+            var processInOrder = function(listChild){
+//                console.log(j + ':' + listChild[0] + '(url:' + listChild[1] + ')' );
+                
+                getWikiDomData(listChild[1])
+                    .success(function(data){
+                    var $wikiData = shapeWikiDomData(data),
+                        pourposeDom = $wikiData.find('.mw-headline:contains("飼育動物")')
+                            .closest('h2').next(),
+                        pourposeText = pourposeDom.text(),
+                        tigers = '';
+                    
+                        tigerList.forEach(function(tiger){
+                            if(pourposeText.match(tiger.name))
+                                tigers += ' ' + tiger.name;
+                        })
+                    if( tigers.length > 0 )
+                        console.log(listChild[1] + 'には' + tigers + ' がいます。');
+                });
+                
+                
+                if(lists[i][j+1] != undefined ){
+                    processInOrder(lists[i][j++]);
+                } else if(lists[i+1] != undefined){
+                    
+                }
+            }
+            
+            processInOrder(lists[i][j]);
+            console.log('完了');
+        });
+        
+        var getWikiDomData = function( title ){
+            return $.ajax({
+                url: 'https://ja.wikipedia.org/w/api.php',
+                dataType : 'jsonp',
+                data: {
+                    format: 'json',
+                    action: 'query',
+                    prop: 'revisions',
+                    rvprop: 'content',
+                    titles: title,
+                    rvparse: 1
+                }
+            });
+            
+        },
+        shapeWikiDomData = function(data){
+            var domData;
+//            console.log(data)
+            for( var prop in data.query.pages ){
+                if(data.query.pages[prop].hasOwnProperty('revisions'))
+                    domData = data.query.pages[prop].revisions[0]['*'];
+                    break;
+            }
+            return $(domData);
+        },
+        getWikiCategoryData = function( title ){
+            return $.ajax({
+                url: 'https://ja.wikipedia.org/w/api.php',
+                dataType : 'jsonp',
+                data: {
+                    format: 'json',
+                    action: 'query',
+                    list: 'categorymembers',
+                    cmtitle: 'category:' + title,
+                    cmprop: 'ids|title|sortkeyprefix',
+                    cmlimit:500
+                }
+            });
+            
+        }
+        
+    });
+
+
+</script>
+
+</html>
