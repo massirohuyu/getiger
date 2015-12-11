@@ -3,5 +3,5 @@
 /tmp
 /node_modules
 .sass-cache
-/css
-/js/lib
+# /css
+# /js/lib
