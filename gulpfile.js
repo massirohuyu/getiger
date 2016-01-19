@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     merge = require('merge-stream'),
     plumber = require('gulp-plumber'),
-    neat = require('node-neat'),
     webserver = require('gulp-webserver'),
     html5Lint = require('gulp-html5-lint');
 
@@ -31,7 +30,7 @@ var htmlFiles = [
 gulp.task('sass', function () {
     gulp.src(scssFiles)
         .pipe(plumber())
-        .pipe(sass({ includePaths: neat.includePaths, outputStyle: 'expanded' })
+        .pipe(sass({ outputStyle: 'expanded' })
               .on('error', sass.logError))
         .pipe(pleeease({
             minifier: false,
