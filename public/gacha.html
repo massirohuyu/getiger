@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="トラクイズ">
+    <meta name="keywords" content="虎, クイズ">
+    <meta name="author" content="HARP">
+
+    <title>ガチャ｜トラクイズアプリ(仮)</title>
+
+    <link rel="stylesheet" href="/css/common.css" media='all'>
+    <script src="/js/lib/jquery.min.js"></script>
+
+    <link rel="shortcut icon" href="">
+    <!--
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="196x196" href="">
+        <link rel="apple-touch-icon" sizes="152x152" href="">
+    -->
+    <link rel="apple-touch-icon" type="image/png" href="/images/apple-touch-icon-144x144.png" sizes="144x144">
+    <link rel="apple-touch-icon" type="image/png" href="/images/apple-touch-icon-114x114.png" sizes="114x114">
+    <link rel="apple-touch-icon" type="image/png" href="/images/apple-touch-icon-72x72.png" sizes="72x72">
+    <link rel="apple-touch-icon" type="image/png" href="/images/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body id="index">
+
+    <div class="container">
+
+        <header class="header" id="page-top">
+            <div class="header__info">
+                <div class="header__info__point">
+                    <span class="header__info__point__num">15</span>
+                    P
+                </div>
+                <a class="p-login-menu__toggle" href="#loginMenu" data-toggle="collapse" aria-expanded="false" aria-controls="loginMenu">
+                    ●
+                    <!-- TODO:ユーザアイコン -->
+                </a>
+                <nav id="loginMenu" class="p-login-menu__content collapsed">
+                    <p class="p-login-menu__content__name">○○さん</p>
+                    <a href="setting.html" class="p-login-menu__content__link">アカウント設定</a>
+                    <a href="#" class="p-login-menu__content__link">ログアウト</a>
+                </nav>
+            </div>
+            
+            <a class="header__btn p-grobal-nav__toggle" href="#globalNav" data-toggle="collapse" aria-expanded="false" aria-controls="globalNav">
+                三
+                <!-- TODO: アイコン設置-->
+            </a>
+            
+            <h1 class="header__title">
+              トラクイズアプリ(仮)
+            </h1>
+        </header>
+
+        <div class="contents">
+
+            <main class="content-main">
+                <div class="p-gacha__gacha">
+                    <img src="#" class="p-gacha__gachaimg">
+                </div>
+                
+                <div class="p-gacha__result">
+                    <h2 class="p-gacha__result__name">
+                        スマトラトラ
+                    </h2>
+                    <div class="p-gacha__result__summary">
+                        <p class="p-gacha__result__img">
+                            <img src="#">
+                        </p>
+                        スマトラトラの簡単な説明・・・
+                    </div>
+                    <a href="collection.html" class="c-btn c-btn--block c-btn--lg c-btn--primary">
+                        GET!
+                    </a>
+                </div>
+            </main><!--/content-main-->
+
+        </div><!--/contents-->
+
+    </div>
+    <!--/container-->
+
+</body>
+<script>
+
+    // TODO: jsファイルに分離する
+    
+    $('a[data-toggle="collapse"]').on('click', function(e){
+        $($(this).attr('href')).toggleClass('collapsed');
+        e.preventDefault();
+    });
+
+</script>
+
+</html>
