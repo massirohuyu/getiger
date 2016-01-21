@@ -448,6 +448,27 @@ body ul, body ol {
 }
 
 /**
+ * Quiz content result
+ */
+.p-quiz__result .p-quiz__result__head {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.p-quiz__result .p-quiz__result__head .p-quiz__result__head__sign {
+  display: block;
+  font-size: 8rem;
+  color: #c12f2f;
+  line-height: 1.2em;
+}
+
+.p-quiz__result .p-quiz__result__head .p-quiz__result__head__str {
+  display: block;
+  font-size: 3rem;
+}
+
+/**
  * gacha content
  */
 .p-gacha__gacha {

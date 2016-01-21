@@ -12,7 +12,7 @@
     <meta name="keywords" content="虎, クイズ">
     <meta name="author" content="HARP">
 
-    <title>クイズ｜トラクイズアプリ(仮)</title>
+    <title>クイズ - 正解｜トラクイズアプリ(仮)</title>
 
     <link rel="stylesheet" href="../css/common.css" media='all'>
     <script src="../js/lib/jquery.min.js"></script>
@@ -65,41 +65,34 @@
 
             <main class="content-main">
                 
-                <div class="p-quiz__content">
+                <div class="p-quiz__result">
                     <h2 class="p-quiz__count">
                         第 1 問
                     </h2>
 
-                    <p class="p-quiz__question">
-                        「虎の威を借る狐」の意味は？
-                    </p>
-
-                    <div class="p-quiz__select-answers">
-                        <a href="quiz_correct.html" class="p-quiz__select-answers__item">
-                            <span class="p-quiz__select-answers__item__num">
-                                1.
-                            </span>
-                            ほにゃほにゃほにゃほにゃ
-                        </a>
-                        <a href="quiz_incorrect.html" class="p-quiz__select-answers__item">
-                            <span class="p-quiz__select-answers__item__num">
-                                2.
-                            </span>
-                            へにゃへにゃへにゃへにゃ
-                        </a>
-                        <a href="quiz_incorrect.html" class="p-quiz__select-answers__item">
-                            <span class="p-quiz__select-answers__item__num">
-                                3.
-                            </span>
-                            はにゃはにゃはにゃはにゃ
-                        </a>
+                    <div class="p-quiz__result__head">
+                        <span class="p-quiz__result__head__sign">
+                          ○
+                          <!-- TODO:ここアイコンいれたい-->
+                        </span>
+                        <span class="p-quiz__result__head__str">
+                          正解
+                        </span>
                     </div>
-                </div>
-            
-                <div class="p-quiz__notice-box">
-                    <p class="p-quiz__notice-box__count">
-                        第 1 問
-                    </p>
+
+                    <div class="p-quiz__result__point">
+                        <span class="p-quiz__result__point__num">
+                            2
+                        </span>
+                        ポイント GET!
+                    </div>
+                    
+                    <a href="quiz.html" class="c-btn c-btn--block c-btn--lg c-btn--primary">
+                        次のクイズへ
+                    </a>
+
+
+                    <!-- 解説入れたり、次に進むボタン入れたり、○ポイントゲットとかいれたりする -->
                 </div>
                 
             </main><!--/content-main-->
