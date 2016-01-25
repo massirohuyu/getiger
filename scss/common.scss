@@ -146,6 +146,14 @@ body {
         padding: 55px 15px 15px;
         width: 100%;
         min-height: 100%;
+        
+        .content-main__title {
+            text-align: center;
+            font-size: 1.3rem;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+        }
     }
     
     .content-side {
@@ -155,6 +163,7 @@ body {
         padding: 15px;
     }
 }
+
 
 
 /* ==========================================================================
@@ -471,6 +480,14 @@ body {
  * gacha content
  */
 
+.p-gacha__list {
+    .p-gacha__list__item {
+        > a {
+            display: block;
+        }
+    }
+}
+
 .p-gacha__gacha {
     position: absolute;
     top: 50%;
@@ -533,14 +550,6 @@ body {
 /**
  * collection content
  */
-
-.p-collection__title {
-    text-align: center;
-    font-size: 1.3rem;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px;
-}
 
 .p-collection__table {
     width: 100%;

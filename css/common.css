@@ -240,6 +240,14 @@ body ul, body ol {
   min-height: 100%;
 }
 
+.contents .content-main .content-main__title {
+  text-align: center;
+  font-size: 1.3rem;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .contents .content-side {
   box-sizing: border-box;
   overflow: hidden;
@@ -527,6 +535,10 @@ body ul, body ol {
 /**
  * gacha content
  */
+.p-gacha__list .p-gacha__list__item > a {
+  display: block;
+}
+
 .p-gacha__gacha {
   position: absolute;
   top: 50%;
@@ -589,14 +601,6 @@ body ul, body ol {
 /**
  * collection content
  */
-.p-collection__title {
-  text-align: center;
-  font-size: 1.3rem;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 10px;
-}
-
 .p-collection__table {
   width: 100%;
   table-layout: fixed;
