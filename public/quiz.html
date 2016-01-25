@@ -37,8 +37,7 @@
         <header class="header" id="page-top">
             <div class="header__info">
                 <div class="header__info__point">
-                    <span class="header__info__point__num">15</span>
-                    P
+                    <span class="header__info__point__num">15</span> P
                 </div>
                 <a class="p-login-menu__toggle" href="#loginMenu" data-toggle="collapse" aria-expanded="false" aria-controls="loginMenu">
                     ●
@@ -50,12 +49,12 @@
                     <a href="#" class="p-login-menu__content__link">ログアウト</a>
                 </nav>
             </div>
-            
+
             <a class="header__btn p-grobal-nav__toggle" href="#globalNav" data-toggle="collapse" aria-expanded="false" aria-controls="globalNav">
                 三
                 <!-- TODO: アイコン設置-->
             </a>
-            
+
             <h1 class="header__title">
               <a href="index.html">トラクイズアプリ(仮)</a>
             </h1>
@@ -64,61 +63,62 @@
         <div class="contents">
 
             <main class="content-main">
-                
+
                 <div class="p-quiz__content">
-                    <h2 class="p-quiz__count">
-                        第 1 問
-                    </h2>
+                    <div class="p-quiz__level is_normal">
+                        <!-- 難易度にあわせて is_easy, is_normal, is_hardクラスを挿入 -->
+                        難易度
+                        <span class="p-quiz__level__star">★</span>
+                        <span class="p-quiz__level__star">★</span>
+                        <span class="p-quiz__level__star">★</span>
+                    </div>
 
                     <p class="p-quiz__question">
-                        「虎の威を借る狐」の意味は？
+                        <span class="p-quiz__question__sign">Q.</span> 「虎の威を借る狐」の意味は？
                     </p>
 
                     <div class="p-quiz__select-answers">
                         <a href="quiz_correct.html" class="p-quiz__select-answers__item">
                             <span class="p-quiz__select-answers__item__num">
                                 1.
-                            </span>
-                            ほにゃほにゃほにゃほにゃ
+                            </span> ほにゃほにゃほにゃほにゃ
                         </a>
                         <a href="quiz_incorrect.html" class="p-quiz__select-answers__item">
                             <span class="p-quiz__select-answers__item__num">
                                 2.
-                            </span>
-                            へにゃへにゃへにゃへにゃ
+                            </span> へにゃへにゃへにゃへにゃ
                         </a>
                         <a href="quiz_incorrect.html" class="p-quiz__select-answers__item">
                             <span class="p-quiz__select-answers__item__num">
                                 3.
-                            </span>
-                            はにゃはにゃはにゃはにゃ
+                            </span> はにゃはにゃはにゃはにゃ
                         </a>
                     </div>
                 </div>
-            
+
                 <div class="p-quiz__notice-box">
                     <p class="p-quiz__notice-box__count">
-                        第 1 問
+                        START！
                     </p>
                 </div>
-                
-            </main><!--/content-main-->
 
-        </div><!--/contents-->
+            </main>
+            <!--/content-main-->
+
+        </div>
+        <!--/contents-->
 
     </div>
     <!--/container-->
 
 </body>
 <script>
-
     // TODO: jsファイルに分離する
-    
-    $('a[data-toggle="collapse"]').on('click', function(e){
+
+    $('a[data-toggle="collapse"]').on('click', function (e) {
         $($(this).attr('href')).toggleClass('collapsed');
         e.preventDefault();
     });
-
 </script>
 
 </html>

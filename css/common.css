@@ -263,7 +263,7 @@ body ul, body ol {
   text-decoration: none;
   font-size: 1.2rem;
   padding: 5px 10px;
-  margin: 5px 5px;
+  margin: 15px 5px;
 }
 
 .c-btn.c-btn--block {
@@ -407,22 +407,31 @@ body ul, body ol {
 .p-quiz__level {
   text-align: center;
   font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  margin: 10px 0;
 }
 
 .p-quiz__level .p-quiz__level__star {
-  color: #fff;
+  color: #666;
 }
 
 .p-quiz__level.is_easy .p-quiz__level__star:nth-child(1),
 .p-quiz__level.is_normal .p-quiz__level__star:nth-child(-n+2),
 .p-quiz__level.is_hard .p-quiz__level__star {
-  color: #bf3b3b;
+  color: #fbe550;
 }
 
 .p-quiz__question {
   padding: 5px;
   font-size: 1.5rem;
   margin-bottom: 2rem;
+}
+
+.p-quiz__question .p-quiz__question__sign {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .p-quiz__select-answers .p-quiz__select-answers__item {
@@ -459,7 +468,7 @@ body ul, body ol {
 .p-quiz__notice-box .p-quiz__notice-box__count {
   text-align: center;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 /**
