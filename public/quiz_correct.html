@@ -69,9 +69,15 @@
                     <h2 class="p-quiz__count">
                         第 1 問
                     </h2>
+                    <div class="p-quiz__level is_normal"><!-- 難易度にあわせて is_easy, is_normal, is_hardクラスを挿入 -->
+                      難易度
+                      <span class="p-quiz__level__star">★</span>
+                      <span class="p-quiz__level__star">★</span>
+                      <span class="p-quiz__level__star">★</span>
+                    </div>
 
                     <div class="p-quiz__result__head">
-                        <span class="p-quiz__result__head__sign">
+                        <span class="p-quiz__result__head__sign is_correct">
                           ○
                           <!-- TODO:ここアイコンいれたい-->
                         </span>
@@ -82,14 +88,23 @@
 
                     <div class="p-quiz__result__point">
                         <span class="p-quiz__result__point__num">
-                            2
+                            3
                         </span>
-                        ポイント GET!
+                        ポイントGET!
+                    </div>
+
+                    <div class="p-quiz__result__desc">
+                      あれば説明を載せる
                     </div>
                     
-                    <a href="quiz.html" class="c-btn c-btn--block c-btn--lg c-btn--primary">
-                        次のクイズへ
-                    </a>
+                    <div class="p-quiz__result__btns">
+                      <a href="quiz.html" class="c-btn c-btn--block c-btn--lg c-btn--primary">
+                          → もう一回
+                      </a>
+                      <a href="gacha.html" class="c-btn c-btn--block c-btn--lg c-btn--important">
+                          → ガチャを引く
+                      </a>
+                    </div>
 
 
                     <!-- 解説入れたり、次に進むボタン入れたり、○ポイントゲットとかいれたりする -->
