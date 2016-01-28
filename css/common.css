@@ -599,6 +599,85 @@ body ul, body ol {
 }
 
 /**
+ * gacha list content
+ */
+.p-gacha__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 40px 0;
+}
+
+.p-gacha__list .p-gacha__list__item {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px dotted #dfbb4e;
+}
+
+.p-gacha__list .p-gacha__list__item.disabled {
+  opacity: .5;
+}
+
+.p-gacha__list .p-gacha__list__item > a {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+.p-gacha__list .p-gacha__list__img {
+  border-radius: 140px;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  padding: 5px;
+  background: #fff;
+}
+
+.p-gacha__list .p-gacha__list__name {
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 140px;
+  border-bottom-right-radius: 140px;
+  background: #fff;
+  width: 140px;
+  height: 60px;
+  padding: 10px 5px 5px;
+  text-align: center;
+  color: #222;
+  line-height: 1;
+  font-size: 1.3rem;
+}
+
+.p-gacha__list .p-gacha__list__type {
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: #325981;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.p-gacha__list .p-gacha__list__type.is_limitless {
+  background-color: #fff;
+  color: #bf3b3b;
+}
+
+.p-gacha__list .p-gacha__list__desc {
+  font-size: 1rem;
+}
+
+.p-gacha__list .p-gacha__list__desc strong {
+  font-size: 1.1rem;
+  color: #bf3b3b;
+}
+
+/**
  * collection content
  */
 .p-collection__table {
