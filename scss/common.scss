@@ -712,9 +712,67 @@ body {
         }
     }
     
+    caption {
+        font-weight: bold;
+        font-size: 1.3rem;
+        text-align: left;
+        border: dotted #dfbb4e;
+        border-width: 2px 0;
+        padding: 10px 0;
+    }
+    
+    .p-collection__table__count {
+        position: relative;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0 10px;
+        background-color: #444;
+        color: #aaa;
+        font-size: .8rem;
+        float: right;
+
+        &:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            margin-top: -4px;
+            border-style: solid;
+            border-width: 4px 5px 4px 0;
+            border-color: transparent #444;
+        }
+        
+        .p-collection__table__count__num {
+            font-size: 1.3rem;
+            color: #fff;
+        }
+    }
+    
     .p-collection__item {
+        position: relative;
+        display: block;
         text-decoration: none;
         font-size: .75rem;
+        
+        .p-collection__item__count {
+            position: absolute;
+            top: -.5rem;
+            right: 0;
+            font-size: .8rem;
+            font-weight: bold;
+            color: #222;
+            background-color: #fff;
+            border-radius: 1rem;
+            z-index: 1;
+            padding: 2px 8px;
+            
+            &:before {
+                content: "×";
+                display: inline;
+                font-size: .6rem;
+            }
+        }
         
         .p-collection__item__img {
             position: relative;
