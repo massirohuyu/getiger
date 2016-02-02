@@ -550,8 +550,8 @@ body ul, body ol {
 .p-gacha__gachaimg {
   -webkit-transform-origin: center center;
           transform-origin: center center;
-  -webkit-animation: gacha-rotating 1.5s linear infinite;
-          animation: gacha-rotating 1.5s linear infinite;
+  -webkit-animation: gacha-fade-in 1s linear, gacha-rotating 1.5s linear infinite;
+          animation: gacha-fade-in 1s linear, gacha-rotating 1.5s linear infinite;
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -572,8 +572,60 @@ body ul, body ol {
   border-top: solid #444 8px;
   padding: 20px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-  -webkit-animation: gacha-zoom-up 1.8s ease-out;
-          animation: gacha-zoom-up 1.8s ease-out;
+  -webkit-animation: gacha-zoom-up1 1.6s ease-out, gacha-zoom-up2 .2s ease-in 1.6s;
+          animation: gacha-zoom-up1 1.6s ease-out, gacha-zoom-up2 .2s ease-in 1.6s;
+}
+
+.p-gacha__result:before {
+  content: "GET!";
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: -5px;
+  border-radius: 50%;
+  background-color: #bf3b3b;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 4em;
+  height: 1em;
+  vertical-align: middle;
+  padding: 1em 0;
+  line-height: 1.2em;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.p-gacha__result .p-gacha__result__status {
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 5px;
+}
+
+.p-gacha__result .p-gacha__result__status .p-gacha__result__status__text {
+  padding: 2px 5px;
+  font-size: .8rem;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 5em;
+  color: #666;
+  background-color: #eee;
+}
+
+.p-gacha__result .p-gacha__result__status .p-gacha__result__status__text:before, .p-gacha__result .p-gacha__result__status .p-gacha__result__status__text:after {
+  content: "■■■";
+  display: inline-block;
+  color: #fff;
+}
+
+.p-gacha__result .p-gacha__result__status .p-gacha__result__status__text.is_rare {
+  background-color: #fbe550;
+  color: inherit;
+}
+
+.p-gacha__result .p-gacha__result__status .p-gacha__result__status__text.is_rare:before, .p-gacha__result .p-gacha__result__status .p-gacha__result__status__text.is_rare:after {
+  content: "★★★";
 }
 
 .p-gacha__result .p-gacha__result__name {
@@ -585,7 +637,8 @@ body ul, body ol {
 }
 
 .p-gacha__result .p-gacha__result__summary {
-  min-height: calc(70% - 1rem);
+  height: calc(70% - 2rem);
+  overflow: auto;
   margin-bottom: 1rem;
 }
 
@@ -884,32 +937,72 @@ body ul, body ol {
   }
 }
 
-@-webkit-keyframes gacha-zoom-up {
+@-webkit-keyframes gacha-fade-in {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  80% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    opacity: 1;
   }
 }
 
-@keyframes gacha-zoom-up {
+@keyframes gacha-fade-in {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  80% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes gacha-zoom-up1 {
+  0% {
+    -webkit-transform: scale(0) translateY(0%);
+            transform: scale(0) translateY(0%);
+  }
+  80% {
+    -webkit-transform: scale(0) translateY(0%);
+            transform: scale(0) translateY(0%);
+  }
+  100% {
+    -webkit-transform: scale(0.5) translateY(-150%);
+            transform: scale(0.5) translateY(-150%);
+  }
+}
+
+@keyframes gacha-zoom-up1 {
+  0% {
+    -webkit-transform: scale(0) translateY(0%);
+            transform: scale(0) translateY(0%);
+  }
+  80% {
+    -webkit-transform: scale(0) translateY(0%);
+            transform: scale(0) translateY(0%);
+  }
+  100% {
+    -webkit-transform: scale(0.5) translateY(-150%);
+            transform: scale(0.5) translateY(-150%);
+  }
+}
+
+@-webkit-keyframes gacha-zoom-up2 {
+  0% {
+    -webkit-transform: scale(0.5) translateY(-150%);
+            transform: scale(0.5) translateY(-150%);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0%);
+            transform: scale(1) translateY(0%);
+  }
+}
+
+@keyframes gacha-zoom-up2 {
+  0% {
+    -webkit-transform: scale(0.5) translateY(-150%);
+            transform: scale(0.5) translateY(-150%);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0%);
+            transform: scale(1) translateY(0%);
   }
 }
