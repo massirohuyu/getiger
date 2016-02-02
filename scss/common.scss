@@ -804,6 +804,92 @@ body {
     }
 }
 
+/**
+ * collection detail content
+ */
+
+.p-collection__detail {
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    
+    .p-collection__detail__status {
+        text-align: center;
+        margin-top: -1rem;
+        margin-bottom: 5px;
+        
+        .p-collection__detail__status__text {
+            padding: 2px 5px;
+            font-size: .8rem;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 5em;
+            color: #666;
+            background-color: #eee;
+
+            &:before,
+            &:after {
+                content: "■■■";
+                display: inline-block;
+                color: #fff;
+            }
+        
+            &.is_rare {
+                background-color: #fbe550;
+                color: inherit;
+            
+                &:before,
+                &:after {
+                    content: "★★★";
+                }
+            }
+        }
+    }
+    
+    .p-collection__detail__name {
+        text-align: center;
+        font-size: 1.4rem;
+        border-bottom: solid #ddd 1px;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .p-collection__detail__summary {
+        font-size: 1.2rem;
+    }
+    
+    .p-collection__detail__summary,
+    .p-collection__detail__more {
+        margin-bottom: 1rem;
+    }
+    
+    .p-collection__detail__records {
+        margin: 1rem 0;
+        background-color: #f5f5f5;
+        
+        .p-collection__detail__records__title {
+            background-color: #d5d5d5;
+            color: #222;
+            font-weight: bold;
+            padding: 5px;
+        }
+        
+        .p-collection__detail__records__data {
+            padding: 5px;
+        }
+    }
+    
+    .p-collection__detail__img {
+        text-align: center;
+        margin-bottom: .5rem;
+        
+        > img {
+            max-width: 100%;
+        }
+    }
+}
+
 /* Utility
    ----------------------------------------------------------------- */
 
