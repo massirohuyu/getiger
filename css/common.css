@@ -246,6 +246,7 @@ body ul, body ol {
   background-color: #fff;
   border-radius: 10px;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 .contents .content-side {
@@ -301,7 +302,17 @@ body ul, body ol {
   margin-top: 10px;
   background-color: #fff;
   border-radius: 10px;
-  padding: 20px;
+  padding: 25px;
+}
+
+.c-form .c-form__label {
+  display: block;
+  background-color: #ddd;
+  padding: 5px 10px;
+  font-size: .9rem;
+  color: #444;
+  font-weight: bold;
+  border-bottom: 1px solid #bbb;
 }
 
 .c-form .c-form__group {
@@ -309,14 +320,8 @@ body ul, body ol {
 }
 
 .c-form .c-form__group .c-form__label {
-  display: block;
-  background-color: #444;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  padding: 5px 10px;
-  font-size: .9rem;
-  color: #eee;
-  font-weight: bold;
 }
 
 .c-form .c-form__group .c-input {
@@ -458,6 +463,12 @@ body ul, body ol {
 .p-top__login-form {
   margin: 0 15px 20px;
   background-color: #222;
+}
+
+.p-top__login-form .c-form__label {
+  background-color: #333;
+  color: #eee;
+  border-color: #444;
 }
 
 /**

@@ -153,6 +153,7 @@ body {
             background-color: #fff;
             border-radius: 10px;
             padding: 10px;
+            margin-bottom: 20px;
         }
     }
     
@@ -217,20 +218,24 @@ body {
     margin-top: 10px;
     background-color: #fff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px;
+        
+    .c-form__label {
+        display: block;
+        background-color: #ddd;
+        padding: 5px 10px;
+        font-size: .9rem;
+        color: #444;
+        font-weight: bold;
+        border-bottom: 1px solid #bbb;
+    }
     
     .c-form__group {
         margin-bottom: 10px;
         
         .c-form__label {
-            display: block;
-            background-color: #444;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
-            padding: 5px 10px;
-            font-size: .9rem;
-            color: #eee;
-            font-weight: bold;
         }
         
         .c-input {
@@ -402,7 +407,11 @@ body {
     margin: 0 15px 20px;
     background-color: #222;
     
-    
+    .c-form__label {
+        background-color: #333;
+        color: #eee;
+        border-color: #444;
+    }
 }
 
 /**
