@@ -121,7 +121,7 @@ body {
   height: 100%;
 }
 
-body input {
+body input, body button {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   cursor: pointer;
   margin: 0;
@@ -294,6 +294,62 @@ body ul, body ol {
   background-color: #bf3b3b;
 }
 
+/**
+ * form
+ */
+.c-form {
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.c-form .c-form__group {
+  margin-bottom: 10px;
+}
+
+.c-form .c-form__group .c-form__label {
+  display: block;
+  background-color: #444;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 5px 10px;
+  font-size: .9rem;
+  color: #eee;
+  font-weight: bold;
+}
+
+.c-form .c-form__group .c-input {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c-form .c-form__group--bottom {
+  text-align: center;
+}
+
+.c-form .c-form__group--bottom .c-btn {
+  margin-bottom: 0;
+}
+
+/**
+ * input
+ */
+.c-input {
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  width: 100%;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+}
+
+.c-input:focus {
+  outline: none;
+}
+
 /* Project
    ----------------------------------------------------------------- */
 /**
@@ -397,6 +453,11 @@ body ul, body ol {
 
 .p-top__about p {
   margin-bottom: 1rem;
+}
+
+.p-top__login-form {
+  margin: 0 15px 20px;
+  background-color: #222;
 }
 
 /**
