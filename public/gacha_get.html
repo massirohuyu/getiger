@@ -51,7 +51,7 @@
                 </nav>
             </div>
             
-            <a class="header__btn p-grobal-nav__toggle" href="#globalNav" data-toggle="collapse" aria-expanded="false" aria-controls="globalNav">
+            <a class="header__btn p-grobal-nav__toggle" href="#globalNav" data-toggle="drawer" aria-expanded="false" aria-controls="globalNav">
                 三
                 <!-- TODO: アイコン設置-->
             </a>
@@ -90,6 +90,32 @@
             </main><!--/content-main-->
 
         </div><!--/contents-->
+        
+        <div id="globalNav" class="global-nav closed">
+          <ul class="global-nav__list">
+            <li class="global-nav__list__child">
+              <a href="index.html" class="global-nav__list__target">
+                ▶ トップページ
+              </a>
+            </li><li class="global-nav__list__child">
+              <a href="quiz.html" class="global-nav__list__target">
+                ▶ トラクイズ
+              </a>
+            </li><li class="global-nav__list__child">
+              <a href="gacha.html" class="global-nav__list__target">
+                ▶ トラガチャ
+              </a>
+            </li><li class="global-nav__list__child">
+              <a href="collection.html" class="global-nav__list__target">
+                ▶ コレクション
+              </a>
+            </li>
+          </ul>
+          
+          <a href="#globalNav" class="global-nav__close-btn" data-toggle="drawer" aria-expanded="false" aria-controls="globalNav">
+            × 閉じる
+          </a>
+        </div>
 
     </div>
     <!--/container-->
@@ -101,6 +127,12 @@
     
     $('a[data-toggle="collapse"]').on('click', function(e){
         $($(this).attr('href')).toggleClass('collapsed');
+        e.preventDefault();
+    });
+    
+    $('a[data-toggle="drawer"]').on('click', function(e){
+        $($(this).attr('href')).toggleClass('closed');
+        $('body').toggleClass('no-scrolled');
         e.preventDefault();
     });
 
