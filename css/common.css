@@ -256,6 +256,53 @@ body ul, body ol {
   padding: 15px;
 }
 
+/* Global navigation
+   ----------------------------------------------------------------- */
+.global-nav {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: rgba(34, 34, 34, 0.9);
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  z-index: 995;
+}
+
+.global-nav.closed {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.global-nav .global-nav__list {
+  border-bottom: 1px solid #fff;
+  padding: 0;
+  margin: 10px;
+}
+
+.global-nav .global-nav__list .global-nav__list__child {
+  border-top: 1px solid #fff;
+}
+
+.global-nav .global-nav__list .global-nav__list__target {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  line-height: 4rem;
+  font-size: 1.2rem;
+}
+
+.global-nav .global-nav__close-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
 /* ==========================================================================
    Object
    ========================================================================== */
@@ -1036,6 +1083,13 @@ body ul, body ol {
 */
 .collapsed {
   display: none;
+}
+
+/*
+* no-scrolled
+*/
+.no-scrolled {
+  overflow: hidden;
 }
 
 /*

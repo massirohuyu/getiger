@@ -165,7 +165,50 @@ body {
     }
 }
 
+/* Global navigation
+   ----------------------------------------------------------------- */
 
+.global-nav {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: rgba(34, 34, 34, .9);
+  transition: transform .2s linear;
+  transform: translateX(0);
+  z-index: 995;
+  
+  &.closed {
+    transform: translateX(-100%);
+  }
+  
+  .global-nav__list {
+    border-bottom: 1px solid #fff;
+    padding: 0;
+    margin: 10px;
+    
+    .global-nav__list__child {
+      border-top: 1px solid #fff;
+    }
+    
+    .global-nav__list__target {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      line-height: 4rem;
+      font-size: 1.2rem;
+    }
+  }
+  
+  .global-nav__close-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+  }
+}
 
 /* ==========================================================================
    Object
@@ -979,6 +1022,14 @@ body {
 
 .collapsed {
     display: none;
+}
+
+/*
+* no-scrolled
+*/
+
+.no-scrolled {
+    overflow: hidden;
 }
 
 /*
