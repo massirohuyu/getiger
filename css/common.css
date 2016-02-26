@@ -185,6 +185,11 @@ body ul, body ol {
   text-decoration: none;
 }
 
+.header .header__title .header__title__img {
+  height: 21px;
+  margin-left: 5px;
+}
+
 .header .header__btn {
   float: left;
   color: #eee;
