@@ -81,6 +81,7 @@ gulp.task('icon-copy', function () {
 gulp.task('server', function() {
   gulp.src('./') //サイトのルートディレクトリ
     .pipe(webserver({
+      host: "192.168.1.10",
       livereload: true
     }));
 });

@@ -80,32 +80,32 @@ body {
     padding: 10px;
     line-height: 20px;
     z-index: 1000;
-    
+
     .header__title {
         font-size: 14px;
         overflow: hidden;
         padding-left: 5px;
-        
+
         > a {
             color: #fff;
             text-decoration: none;
         }
-        
+
         .header__title__img {
             height: 21px;
             margin-left: 5px;
         }
     }
-    
+
     .header__btn {
         float: left;
         color: #eee;
         text-decoration: none;
     }
-    
+
     .header__info {
         float: right;
-        
+
         .header__info__point {
             position: relative;
             display: inline-block;
@@ -114,7 +114,7 @@ body {
             margin-top: -3px;
             margin-right: 5px;
             background-color: #bf3b3b;
-            
+
             &:after {
                 content: " ";
                 display: block;
@@ -127,7 +127,7 @@ body {
                 border-color: transparent #bf3b3b;
             }
         }
-        
+
         .p-login-menu__toggle {
             display: inline-block;
             color: #eee;
@@ -143,7 +143,7 @@ body {
 
 .contents {
     height: 100%;
-    
+
     .content-main {
         position: relative;
         box-sizing: border-box;
@@ -151,7 +151,7 @@ body {
         padding: 55px 15px 15px;
         width: 100%;
         min-height: 100%;
-        
+
         .content-main__title {
             text-align: center;
             font-size: 1.3rem;
@@ -161,7 +161,7 @@ body {
             margin-bottom: 20px;
         }
     }
-    
+
     .content-side {
         box-sizing: border-box;
         overflow: hidden;
@@ -184,20 +184,20 @@ body {
   transition: transform .2s linear;
   transform: translateX(0);
   z-index: 995;
-  
+
   &.closed {
     transform: translateX(-100%);
   }
-  
+
   .global-nav__list {
     border-bottom: 1px solid #fff;
     padding: 0;
     margin: 10px;
-    
+
     .global-nav__list__child {
       border-top: 1px solid #fff;
     }
-    
+
     .global-nav__list__target {
       text-decoration: none;
       color: #fff;
@@ -206,7 +206,7 @@ body {
       font-size: 1.2rem;
     }
   }
-  
+
   .global-nav__close-btn {
     display: block;
     text-align: center;
@@ -238,21 +238,21 @@ body {
     font-size: 1.2rem;
     padding: 5px 10px;
     margin: 15px 0;
-    
+
     &.c-btn--block {
         display: block;
         width: 100%;
     }
-    
+
     &.c-btn--lg {
         font-size: 1.5rem;
         padding: 10px 15px;
     }
-    
+
     &.c-btn--primary {
         background-color: #325981;
     }
-    
+
     &.c-btn--important {
         background-color: #bf3b3b;
     }
@@ -267,7 +267,7 @@ body {
     background-color: #fff;
     border-radius: 10px;
     padding: 25px;
-        
+
     .c-form__label {
         display: block;
         background-color: #ddd;
@@ -277,31 +277,31 @@ body {
         font-weight: bold;
         border-bottom: 1px solid #bbb;
     }
-    
+
     .c-form__group {
         margin-bottom: 10px;
-        
+
         .c-form__label {
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
         }
-        
+
         .c-input {
             border-top-left-radius: 0;
             border-top-right-radius: 0;
         }
     }
-    
+
     .c-form__group--bottom {
         text-align: center;
-        
+
         .c-btn {
             margin-bottom: 0;
         }
     }
 }
-  
-  
+
+
 
 /**
  * input
@@ -316,7 +316,7 @@ body {
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 1.2rem;
-    
+
     &:focus {
         outline: none;
     }
@@ -332,7 +332,7 @@ body {
  */
 
 .p-login-menu__toggle {
-    
+
 }
 
 .p-login-menu__content {
@@ -341,7 +341,7 @@ body {
     right: 0;
     background-color: #f5f5f5;
     color: #222;
-    
+
     &:after {
         content: " ";
         display: block;
@@ -353,11 +353,11 @@ body {
         border-width: 0 4px 5px 4px;
         border-color: #f5f5f5 transparent;
     }
-    
+
     .p-login-menu__content__name {
         padding: 5px;
     }
-    
+
     .p-login-menu__content__link {
         display: block;
         padding: 5px;
@@ -381,8 +381,8 @@ body {
         float: left;
         text-align: center;
         text-decoration: none;
-        
-        
+
+
         .p-top__main-nav__item__img {
             border-radius: 50%;
             width: 80px;
@@ -391,7 +391,7 @@ body {
             padding: 5px;
             background: #fff;
         }
-        
+
         .p-top__main-nav__item__name {
             display: block;
             font-size: .8rem;
@@ -399,30 +399,30 @@ body {
             color: #222;
         }
     }
-    
+
     .p-top__main-nav__item--quiz {
         @extend %p-top__main-nav__item;
         width: 60%;
         margin: 0 20% 10px;
-        
+
         .p-top__main-nav__item__img {
             width: 120px;
             height: 120px;
         }
-        
+
         .p-top__main-nav__item__name {
             font-size: 1.4rem;
         }
     }
-    
+
     .p-top__main-nav__item--gacha {
         @extend %p-top__main-nav__item;
     }
-    
+
     .p-top__main-nav__item--collection {
         @extend %p-top__main-nav__item;
     }
-    
+
 }
 
 .p-top__about {
@@ -430,22 +430,22 @@ body {
     color: #fff;
     text-align: center;
     font-weight: bold;
-    
+
     .p-top__about__heading {
         margin-top: 30px;
         padding: 15px 5px;
         font-size: 1.5rem;
-        
+
         border: dotted #fbe550;
         border-width: 2px 0;
         margin-bottom: 2rem;
     }
-    
+
     .p-top__about__footing {
         font-size: 1.2rem;
         color: #fbe550;
     }
-    
+
     p {
         margin-bottom: 1rem;
     }
@@ -454,7 +454,7 @@ body {
 .p-top__login-form {
     margin: 0 15px 20px;
     background-color: #222;
-    
+
     .c-form__label {
         background-color: #333;
         color: #eee;
@@ -501,7 +501,7 @@ body {
     padding: 5px;
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    
+
     .p-quiz__question__sign {
         font-size: 2rem;
         font-weight: bold;
@@ -518,7 +518,7 @@ body {
         font-size: 1.2rem;
         text-decoration: none;
         border-bottom: 4px solid #ddd;
-        
+
         .p-quiz__select-answers__item__num {
             font-weight: bold;
         }
@@ -532,13 +532,13 @@ body {
     left: 30px;
     right: 30px;
     z-index: 990;
-    
+
     background-color: #222;
     color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    
+
     animation: quiz-slide-in-out 1.5s ease-in;
 
     .p-quiz__notice-box__count {
@@ -558,11 +558,11 @@ body {
         font-weight: bold;
         margin: 10px 0;
         line-height: 1;
-        
+
         .p-quiz__result__head__sign {
             display: block;
             font-size: 8rem;
-          
+
           &.is_correct {
             color: #c12f2f;
           }
@@ -573,7 +573,7 @@ body {
             font-size: 4rem;
         }
     }
-  
+
     .p-quiz__result__point {
         text-align: center;
         line-height: 1.1;
@@ -590,14 +590,14 @@ body {
             font-size: 1.5em;
         }
     }
-  
+
     .p-quiz__result__desc {
         border-radius: 10px;
         padding: 15px;
         background: #fff;
         margin: 20px 0;
     }
-  
+
     .p-quiz__result__btns {
         margin-top: 50px;
     }
@@ -648,9 +648,9 @@ body {
     border-top: solid #444 8px;
     padding: 20px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    
-    animation: gacha-zoom-up2 .2s ease-in 1.6s, gacha-zoom-up1 1.6s ease-out;
-  
+
+    animation: gacha-zoom-up2 .2s ease-in 1.6s, gacha-zoom-up1 1.6s ease-out .05s;
+
     &:before {
         content: "GET!";
         display: block;
@@ -670,12 +670,12 @@ body {
         line-height: 1.2em;
         transform: rotate(-15deg);
     }
-    
+
     .p-gacha__result__status {
         text-align: center;
         margin-top: -1rem;
         margin-bottom: 5px;
-        
+
         .p-gacha__result__status__text {
             padding: 2px 5px;
             font-size: .8rem;
@@ -691,11 +691,11 @@ body {
                 display: inline-block;
                 color: #fff;
             }
-        
+
             &.is_rare {
                 background-color: #fbe550;
                 color: inherit;
-            
+
                 &:before,
                 &:after {
                     content: "★★★";
@@ -703,7 +703,7 @@ body {
             }
         }
     }
-    
+
     .p-gacha__result__name {
         text-align: center;
         font-size: 1.4rem;
@@ -711,17 +711,17 @@ body {
         padding-bottom: 1rem;
         margin-bottom: 1rem;
     }
-    
+
     .p-gacha__result__summary {
         height: calc(70% - 2rem);
         overflow: auto;
         margin-bottom: 1rem;
     }
-    
+
     .p-gacha__result__img {
         text-align: center;
         margin-bottom: .5rem;
-        
+
         > img {
             max-width: 100%;
         }
@@ -736,16 +736,16 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 40px 0;
-  
+
   .p-gacha__list__item {
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 2px dotted #dfbb4e;
-    
+
     &.disabled {
       opacity: .5;
     }
-    
+
     > a {
       position: relative;
       display: block;
@@ -754,7 +754,7 @@ body {
       margin-bottom: 10px;
     }
   }
-  
+
   .p-gacha__list__img {
     border-radius: 140px;
     width: 140px;
@@ -763,7 +763,7 @@ body {
     padding: 5px;
     background: #fff;
   }
-  
+
   .p-gacha__list__name {
     position: absolute;
     bottom: 0;
@@ -778,7 +778,7 @@ body {
     line-height: 1;
     font-size: 1.3rem;
   }
-  
+
   .p-gacha__list__type {
     position: absolute;
     top: 0px;
@@ -790,16 +790,16 @@ body {
     transform: rotate(-15deg);
     padding: 5px 10px;
     color: #fff;
-    
+
     &.is_limitless {
       background-color: #fff;
       color: #bf3b3b;
     }
   }
-  
+
   .p-gacha__list__desc {
     font-size: 1rem;
-    
+
     strong {
       font-size: 1.1rem;
       color: #bf3b3b;
@@ -817,26 +817,24 @@ body {
     width: 100%;
     table-layout: fixed;
     margin-top: 20px;
-    
+
     > tbody > tr {
         > td {
             width: 30%;
             text-align: center;
             vertical-align: middle;
-            padding: 10px 5px;
-            border: dotted #dfbb4e;
-            border-width: 2px 0 0 2px;
+            padding: 20px 15px 0;
 
             &:first-child {
                 border-left-width: 0;
             }
         }
-        
+
         &:first-child > td {
             border-top-width: 0;
         }
     }
-    
+
     caption {
         font-weight: bold;
         font-size: 1.3rem;
@@ -845,7 +843,7 @@ body {
         border-width: 2px 0;
         padding: 10px 0;
     }
-    
+
     .p-collection__table__count {
         position: relative;
         display: inline-block;
@@ -867,19 +865,32 @@ body {
             border-width: 4px 5px 4px 0;
             border-color: transparent #444;
         }
-        
+
         .p-collection__table__count__num {
             font-size: 1.3rem;
             color: #fff;
         }
     }
-    
+
     .p-collection__item {
         position: relative;
         display: block;
         text-decoration: none;
         font-size: .75rem;
-        
+        width: 100%;
+        height: 100%;
+        background-color: #dfbb4e;
+        border: solid #dfbb4e 4px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &[href] {
+            border: none;
+            background-color: #fff;
+            border: solid #fff 4px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+        }
+
         .p-collection__item__count {
             position: absolute;
             top: -.5rem;
@@ -891,41 +902,72 @@ body {
             border-radius: 1rem;
             z-index: 1;
             padding: 2px 8px;
-            
+
             &:before {
                 content: "×";
                 display: inline;
                 font-size: .6rem;
             }
         }
-        
+
         .p-collection__item__img {
             position: relative;
-            display: inline-block;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            overflow: hidden;
-            background: #fff;
-            
+            width: 100%;
+
             > img {
-                position: absolute;
-                height: 60px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                width: 100%;
+                vertical-align: bottom;
             }
         }
-        
+
+        .p-collection__item__pieces {
+            width: 100%;
+            height: 100%;
+
+            > tbody > tr {
+                > td {
+                    width: 50%;
+                    text-align: center;
+                    vertical-align: middle;
+                    padding: 0;
+                    color: #dfbb4e;
+                    background-color: #fbe550;
+                    border: dotted #dfbb4e;
+                    border-width: 2px 0 0 2px;
+
+                    &:first-child {
+                        border-left-width: 0;
+                    }
+
+                    .p-collection__item--empty {
+                        border: none;
+                        font-size: 3rem;
+                        padding: calc(50% - .8em) 0;
+                    }
+                }
+
+                &:first-child > td {
+                    border-top-width: 0;
+                }
+            }
+        }
+
         .p-collection__item__name {
             display: block;
             color: #222;
+            font-size: 1.3em;
+            line-height: 1.8em;
         }
     }
-    
+
     .p-collection__item--empty {
+        display: inline-block;
         color: #dfbb4e;
-        font-size: 4rem;
+        font-size: 6rem;
+        width: 100%;
+        border: dotted #dfbb4e 2px;
+        border-radius: 10px;
+        padding: calc(50% - .6em) 0;
     }
 }
 
@@ -938,12 +980,12 @@ body {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    
+
     .p-collection__detail__status {
         text-align: center;
         margin-top: -1rem;
         margin-bottom: 5px;
-        
+
         .p-collection__detail__status__text {
             padding: 2px 5px;
             font-size: .8rem;
@@ -959,11 +1001,11 @@ body {
                 display: inline-block;
                 color: #fff;
             }
-        
+
             &.is_rare {
                 background-color: #fbe550;
                 color: inherit;
-            
+
                 &:before,
                 &:after {
                     content: "★★★";
@@ -971,7 +1013,7 @@ body {
             }
         }
     }
-    
+
     .p-collection__detail__name {
         text-align: center;
         font-size: 1.4rem;
@@ -979,36 +1021,36 @@ body {
         padding-bottom: 1rem;
         margin-bottom: 1rem;
     }
-    
+
     .p-collection__detail__summary {
         font-size: 1.2rem;
     }
-    
+
     .p-collection__detail__summary,
     .p-collection__detail__more {
         margin-bottom: 1rem;
     }
-    
+
     .p-collection__detail__records {
         margin: 1rem 0;
         background-color: #f5f5f5;
-        
+
         .p-collection__detail__records__title {
             background-color: #d5d5d5;
             color: #222;
             font-weight: bold;
             padding: 5px;
         }
-        
+
         .p-collection__detail__records__data {
             padding: 5px;
         }
     }
-    
+
     .p-collection__detail__img {
         text-align: center;
         margin-bottom: .5rem;
-        
+
         > img {
             max-width: 100%;
         }
@@ -1045,7 +1087,7 @@ body {
   0% {
     opacity: 0;
   }
-  
+
   80% {
     opacity: 0;
   }
@@ -1059,11 +1101,11 @@ body {
   0% {
     bottom: 100%;
   }
-  
+
   20% {
     bottom: 40%;
   }
-  
+
   80% {
     bottom: 40%;
   }
@@ -1080,7 +1122,7 @@ body {
   50% {
     transform: scale(0);
   }
-    
+
   90% {
     transform: scale(1.5);
   }
@@ -1114,11 +1156,11 @@ body {
   0% {
     transform: scale(0) translateY(0%);
   }
-    
+
   80% {
     transform: scale(0) translateY(0%);
   }
-  
+
   100% {
     transform: scale(.5) translateY(-150%);
   }

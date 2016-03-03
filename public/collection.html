@@ -50,12 +50,12 @@
                     <a href="#" class="p-login-menu__content__link">ログアウト</a>
                 </nav>
             </div>
-            
+
             <a class="header__btn p-grobal-nav__toggle" href="#globalNav" data-toggle="drawer" aria-expanded="false" aria-controls="globalNav">
                 三
                 <!-- TODO: アイコン設置-->
             </a>
-            
+
             <h1 class="header__title">
               <a href="index.html"><img src="../images/logo_small.png" class="header__title__img" alt="GETIGER"></a>
             </h1>
@@ -64,11 +64,11 @@
         <div class="contents">
 
             <main class="content-main">
-                
+
                 <h2 class="content-main__title">
                     コレクション
                 </h2>
-                
+
                 <table class="p-collection__table">
                     <caption>
                         通常アイテム
@@ -97,31 +97,39 @@
                         </tr>
                         <tr>
                             <td>
-                                <div class="p-collection__item">
-                                  <table class="p-collection__item__pieces">
-                                      <tbody>
-                                        <tr>
-                                          <td>
-
-                                          </td><td>
-                                            <img src="../images/tiger_02.jpg" alt="スマトラトラ02">
-                                          </td>
-                                        </tr><tr>
-                                          <td>
-
-                                          </td><td>
-
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                  </table>
-                                  <span class="p-collection__item__name">？？？</span>
-                              </div>
-                            </td>
-                            <td>
                                 <span class="p-collection__item--empty">
                                     ？
                                 </span>
+                            </td>
+                            <td>
+                                <div class="p-collection__item">
+                                    <table class="p-collection__item__pieces">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="p-collection__item--empty">
+                                                        1
+                                                    </span>
+                                                </td><td>
+                                                    <span class="p-collection__item__img">
+                                                        <img src="../images/tiger_02.jpg" alt="スマトラトラ02">
+                                                    </span>
+                                                </td>
+                                            </tr><tr>
+                                                <td>
+                                                    <span class="p-collection__item__img">
+                                                        <img src="../images/tiger_03.jpg" alt="スマトラトラ03">
+                                                    </span>
+                                                </td><td>
+                                                    <span class="p-collection__item--empty">
+                                                        4
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <span class="p-collection__item__name">？？？</span>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -138,7 +146,7 @@
                         </tr>
                     </tbody>
                 </table>
-                
+
                 <table class="p-collection__table">
                     <caption>
                         レアアイテム
@@ -164,11 +172,6 @@
                                     ？
                                 </span>
                             </td>
-                            <td>
-                                <span class="p-collection__item--empty">
-                                    ？
-                                </span>
-                            </td>
                         </tr>
                         <tr>
                             <td>
@@ -181,18 +184,8 @@
                                     ？
                                 </span>
                             </td>
-                            <td>
-                                <span class="p-collection__item--empty">
-                                    ？
-                                </span>
-                            </td>
                         </tr>
                         <tr>
-                            <td>
-                                <span class="p-collection__item--empty">
-                                    ？
-                                </span>
-                            </td>
                             <td>
                                 <span class="p-collection__item--empty">
                                     ？
@@ -206,11 +199,11 @@
                         </tr>
                     </tbody>
                 </table>
-                
+
             </main><!--/content-main-->
 
         </div><!--/contents-->
-        
+
         <div id="globalNav" class="global-nav closed">
           <ul class="global-nav__list">
             <li class="global-nav__list__child">
@@ -231,7 +224,7 @@
               </a>
             </li>
           </ul>
-          
+
           <a href="#globalNav" class="global-nav__close-btn" data-toggle="drawer" aria-expanded="false" aria-controls="globalNav">
             × 閉じる
           </a>
@@ -244,12 +237,12 @@
 <script>
 
     // TODO: jsファイルに分離する
-    
+
     $('a[data-toggle="collapse"]').on('click', function(e){
         $($(this).attr('href')).toggleClass('collapsed');
         e.preventDefault();
     });
-    
+
     $('a[data-toggle="drawer"]').on('click', function(e){
         $($(this).attr('href')).toggleClass('closed');
         $('body').toggleClass('no-scrolled');
