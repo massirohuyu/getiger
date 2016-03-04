@@ -868,6 +868,7 @@ body ul, body ol {
 }
 
 .p-collection__table > tbody > tr > td {
+  position: relative;
   width: 30%;
   text-align: center;
   vertical-align: middle;
@@ -917,6 +918,31 @@ body ul, body ol {
 .p-collection__table .p-collection__table__count .p-collection__table__count__num {
   font-size: 1.3rem;
   color: #fff;
+}
+
+.p-collection__table .p-collection__item__number {
+  position: absolute;
+  display: block;
+  top: 22px;
+  left: 7px;
+  background-color: #fff;
+  width: 80px;
+  line-height: 1.3rem;
+  color: #666;
+  font-size: .85rem;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.p-collection__table .p-collection__item__number:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: solid transparent;
+  border-width: 0 4px 4px 0;
+  border-right-color: #888;
 }
 
 .p-collection__table .p-collection__item {
@@ -974,6 +1000,7 @@ body ul, body ol {
 }
 
 .p-collection__table .p-collection__item .p-collection__item__pieces > tbody > tr > td {
+  position: relative;
   width: 50%;
   text-align: center;
   vertical-align: middle;
@@ -990,8 +1017,8 @@ body ul, body ol {
 
 .p-collection__table .p-collection__item .p-collection__item__pieces > tbody > tr > td .p-collection__item--empty {
   border: none;
-  font-size: 2.5rem;
-  padding: calc(50% - 1em) 0;
+  font-size: 1.6rem;
+  padding-bottom: calc(50% - 1em);
 }
 
 .p-collection__table .p-collection__item .p-collection__item__pieces > tbody > tr:first-child > td {
@@ -1001,11 +1028,12 @@ body ul, body ol {
 .p-collection__table .p-collection__item .p-collection__item__name {
   display: block;
   color: #222;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.8em;
 }
 
 .p-collection__table .p-collection__item--empty {
+  position: relative;
   display: inline-block;
   color: #dfbb4e;
   font-size: 6rem;
@@ -1013,7 +1041,7 @@ body ul, body ol {
   height: 100%;
   border: dotted #dfbb4e 4px;
   border-radius: 10px;
-  padding-top: calc(50% - 1em);
+  padding-top: calc(50% - .6em);
 }
 
 /**
