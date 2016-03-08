@@ -649,7 +649,7 @@ body {
     padding: 20px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 
-    animation: gacha-zoom-up2 .2s ease-in 1.6s, gacha-zoom-up1 1.6s ease-out .05s;
+    animation: gacha-zoom-up2 .2s ease-in 1.6s, gacha-zoom-up1 0.2s ease-out 1.4s, gacha-zoom-up3 1.4s linear;
 
     &:before {
         content: "GET!";
@@ -1187,10 +1187,6 @@ body {
     transform: scale(0) translateY(0%);
   }
 
-  80% {
-    transform: scale(0) translateY(0%);
-  }
-
   100% {
     transform: scale(.5) translateY(-150%);
   }
@@ -1203,5 +1199,15 @@ body {
 
   100% {
     transform: scale(1) translateY(0%);
+  }
+}
+
+@keyframes gacha-zoom-up3 {
+  0% {
+    transform: scale(0) translateY(0%);
+  }
+
+  100% {
+    transform: scale(0) translateY(0%);
   }
 }
